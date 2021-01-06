@@ -1,0 +1,402 @@
+#section-aboutUs {
+
+    & img {
+        @include img-size;
+    }
+
+    & i {
+        color: $color-yellow;
+        font-size: $font-size-large;
+    }
+
+    & .num {
+        font-size: $font-size-large;
+        color: $color-grey-light;
+    }
+}
+
+/*__________________________________section team-member begin_________________________________*/
+#section-team-member {
+
+    & .collapse {
+        background: linear-gradient(90deg, $color-black 70%, $color-yellow 0%);
+        border: 1px solid $color-white;
+        padding: 2rem;
+
+        & .team__member__info {
+            display: none;
+        }
+
+        & .active-member {
+            display: initial;
+        }
+
+        & .team__member {
+
+            &__heading {
+                font-size: $font-size-large;
+                color: $color-white;
+                text-transform: uppercase;
+                font-family: $font-heading;
+                margin-bottom: 0 !important;
+            }
+
+            &__heading__small {
+                font-size: $font-size-small;
+                color: $color-grey;
+                overflow: hidden;
+                padding: 0.2rem;
+            }
+
+            &__para {
+                font-size: 0.9rem;
+                color: $color-grey-light;
+                opacity: 0.9;
+
+                &__experience {
+                    font-size: $font-size-small;
+                    color: $color-yellow;
+                    opacity: 0.7;
+                }
+
+            }
+
+            &__image__container {
+                height: 20rem;
+                width: 20rem;
+                display: none;
+
+                & img {
+                    @include img-size;
+                }
+            }
+        }
+
+        & .active-member {
+            display: initial !important;
+        }
+
+        & .controls i {
+            color: $color-white;
+            font-size: $font-size-large;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+    }
+
+}
+
+/*__________________________________section team-member ends_________________________________*/
+
+/*__________________________________section portfolio begin_________________________________*/
+.portfolio {
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 5vw);
+    grid-gap: 1rem;
+
+    &__item {
+        &--1 {
+            grid-row: 1/span 2;
+            grid-column: 1/span 2;
+        }
+
+        &--2 {
+            grid-row: 1/span 3;
+            grid-column: 3/span 3;
+        }
+
+        &--3 {
+            grid-row: 1/span 2;
+        }
+
+        &--4 {
+            grid-column: 7/-1;
+            grid-row: 1/span 2;
+        }
+
+        &--5 {
+            grid-row: 3/span 3;
+            grid-column: 1/span 2;
+        }
+
+        &--6 {
+            grid-column: 3/span 2;
+            grid-row: 4/span 2;
+        }
+
+        &--7 {
+            grid-column: 6/span 2;
+            grid-row: 3/span 2;
+        }
+
+        &--8 {
+            grid-row: 3/span 3;
+        }
+
+        &--10 {
+            grid-row: 5/ -1;
+            grid-column: 5/span 3;
+        }
+
+        &--11 {
+            grid-row: 6/-1;
+        }
+
+        &--12 {
+            grid-column: 2/span 2;
+            grid-row: 6/-1;
+        }
+
+        &--13,
+        &--14 {
+            grid-row: 6/-1;
+        }
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+
+/*__________________________________section portfolio ends_________________________________*/
+
+/*__________________________________section services begin_________________________________*/
+#section-services {
+    text-align: center;
+
+    & .service__box {
+        padding: 0.8rem;
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-column-gap: 1rem;
+        grid-row-gap: 0.5rem;
+        text-align: left;
+
+        &>i {
+            grid-row: 1/span 2;
+            font-size: 2.5rem;
+            color: $color-yellow;
+            opacity: 0.8;
+            transform: translateY(-0.5rem);
+        }
+
+        &>h3 {
+            font-size: $font-size-small;
+            margin-bottom: 0;
+            padding: 0.2rem;
+            letter-spacing: 2px;
+
+        }
+
+    }
+}
+
+/*__________________________________section services ends_________________________________*/
+
+/*__________________________________section price begin_________________________________*/
+#section-price {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/background-2.jpeg);
+    @include background-img-pos;
+    background-attachment: fixed;
+
+    & .card {
+        background: transparent !important;
+        border-radius: 0 !important;
+        border: 1px solid $color-grey-light !important;
+        transition: all 0.3s ease;
+
+        &-body {
+            padding: 0 !important;
+
+            &-type {
+                font-size: $font-size-large;
+                color: $color-yellow;
+                background: $color-black;
+                padding: 1rem 0rem;
+            }
+
+            &-price {
+                font-size: $font-size-large;
+                color: $color-white;
+                background: #1e1b1b;
+            }
+
+            &-features {
+                background: $color-white;
+
+                & p {
+                    padding: 0.5rem 0;
+                    border-bottom: 1px solid $color-grey-light;
+                    color: $color-grey;
+                    opacity: 0.7;
+                }
+            }
+
+            & .button__secondary {
+                display: block;
+
+            }
+        }
+
+        &:hover {
+            transform: translateY(-1rem);
+
+            & .button__secondary {
+                background: $color-yellow;
+                color: $color-grey;
+            }
+        }
+    }
+
+    @media(max-width:576px) {
+        & .col-xs-12 {
+            width: 15rem;
+        }
+    }
+}
+
+/*__________________________________section price ends_________________________________*/
+
+/*__________________________________section testimonial begin_________________________________*/
+#section-testimonial {
+    & .owl-item {
+        display: flex;
+        justify-content: center;
+
+        & .center {
+            & .card {
+                background: $color-yellow !important;
+            }
+        }
+    }
+
+    & .item {
+        & .card {
+            background: $color-grey-dark !important;
+            padding: 0.5rem;
+            cursor: pointer;
+
+            &-img-top {
+                width: 8rem;
+                height: 8rem;
+                object-fit:cover;
+            }
+        }
+    }
+
+    & .card {
+        & .testimonial__heading {
+            font-size: $font-size-small;
+            color: $color-yellow;
+            text-transform: uppercase;
+            overflow: hidden;
+
+            &--small {
+                font-size: $font-size-small;
+                color: $color-grey;
+                padding: 0.3rem;
+            }
+        }
+    }
+
+    & .owl-dots {
+        padding: 1rem;
+    }
+}
+
+/*__________________________________section testimonial ends_________________________________*/
+
+/*__________________________________section bottom gallery begin_________________________________*/
+#section-bottom-gallery {
+
+    padding: 0;
+
+    & .row {
+        padding: 0 1rem !important;
+    }
+
+    & .img__box {
+        height: 15rem;
+        //width: calc((100vw - 0.4rem) / 4);
+        width: auto;
+        position: relative;
+        background: $color-black;
+        overflow: hidden;
+        box-sizing: border-box;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border-top: 1px solid $color-white;
+            border-bottom: 1px solid $color-white;
+            box-sizing: border-box;
+            transition: 0.5s;
+            transform: scaleX(0);
+            opacity: 0;
+        }
+
+        &:hover:before {
+            transform: scaleX(1);
+            opacity: 1;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border-left: 1px solid $color-white;
+            border-right: 1px solid $color-white;
+            box-sizing: border-box;
+            transition: 0.5s;
+            transform: scaleY(0);
+            opacity: 0;
+        }
+
+        &:hover:after {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+
+        &:hover img {
+            transform: scale(1.02);
+            opacity: 0.38;
+            transition: 0.5s;
+        }
+
+        & img {
+            @include img-size;
+        }
+
+        &__text {
+            position: absolute;
+            bottom: 10%;
+            color: $color-white;
+            left: 50%;
+            transform: translate(-50%, 5rem);
+            transition: all 0.3s ease-in;
+        }
+    }
+
+    & .img__box:hover .img__box__text {
+        transform: translate(-50%, 0rem);
+    }
+}
+
+/*__________________________________section bottom gallery ends_________________________________*/

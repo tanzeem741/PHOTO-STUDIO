@@ -1,0 +1,94 @@
+#header {
+    background: $color-black;
+}
+
+.navbar {
+    background: $color-black;
+
+    & .navbar-brand {
+        color: $color-white;
+        font-size: 2rem;
+        font-weight: 550;
+        text-transform: uppercase;
+
+        &-yellow {
+            color: $color-yellow;
+        }
+    }
+
+    & .navbar-collapse {
+        justify-content: flex-end;
+    }
+
+
+    & .navbar-nav .nav-item .nav-link {
+
+        font-size: $font-size-small;
+        color: $color-grey;
+        font-family: $font-heading-secondary;
+
+        &.active,
+        &:hover {
+            color: $color-yellow;
+        }
+
+    }
+
+    @media(max-width:576px) {
+        & .navbar-brand {
+            font-size: $font-size-normal;
+        }
+
+        & .navbar-nav .nav-item .nav-link {
+            font-size: 0.86rem;
+        }
+
+    }
+}
+
+.header__description {
+    background: linear-gradient(90deg, $color-black 20%, transparent 0%), url(../img/backgroung-2.jpeg);
+    height: 100vh;
+
+    background-position: top;
+    background-size: cover;
+
+    & .header__titles {
+        position: absolute;
+        top: 50%;
+        left: 8%;
+        transform: translate(0, -50%);
+        width: 25rem;
+        height: auto;
+
+        & .header__quote {
+            font-size: 2.5rem;
+            color: $color-white;
+            text-transform: uppercase;
+            font-weight: 600;
+            overflow: hidden;
+            font-family: $font-heading;
+        }
+
+        & .header__quote--second {
+            color: $color-grey;
+            font-size: $font-size-small;
+            font-size: italic;
+        }
+    }
+
+    @media(max-width:800px) {
+        height: 50vh;
+
+    }
+
+    @media(max-width:576px) {
+        & .header__titles {
+            width: auto;
+
+            & .header__quote {
+                font-size: $font-size-large;
+            }
+        }
+    }
+}

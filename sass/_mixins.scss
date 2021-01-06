@@ -1,0 +1,10 @@
+@mixin background-img-pos {
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin img-size {
+    height: 100%;
+    width: 100%;
+
+}

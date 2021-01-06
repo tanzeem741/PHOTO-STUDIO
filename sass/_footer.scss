@@ -1,0 +1,46 @@
+#footer {
+
+    & h2 {
+        font-size: 1.5rem;
+        padding: 0.2rem;
+    }
+
+    & p:hover {
+        color: $color-yellow;
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    & .contact .d-flex:not(:last-child) {
+        border-bottom: 1px solid $color-grey-dark;
+    }
+
+    & .left {
+        & i {
+            font-size: 2rem;
+        }
+
+        img {
+            height: 5rem;
+            width: 7rem;
+            border-radius: 2px;
+        }
+    }
+
+    & form {
+        padding: 0.2rem;
+
+        & .form-control {
+            border: 0 !important;
+            background: $color-grey-dark !important;
+            border-radius: 0 !important;
+            color: $color-grey-light;
+
+            &::placeholder,
+            & select {
+                color: $color-grey-light;
+            }
+        }
+    }
+
+}

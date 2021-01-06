@@ -1,0 +1,52 @@
+.heading {
+    &__primary {
+        color: $color-white;
+        font-size: 3rem;
+        text-transform: capitalize;
+        letter-spacing: 0.4rem;
+        word-spacing: 1rem;
+        overflow: hidden;
+
+        &__yellow {
+            color: $color-yellow;
+        }
+    }
+
+    &__secondary {
+        color: $color-grey;
+        font-size: $font-size-large;
+        text-transform: capitalize;
+        overflow: hidden;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+    }
+
+    @media(max-width:576px) {
+
+        &__primary {
+            font-size: $font-size-large;
+            letter-spacing: 0.3rem;
+            word-spacing: 0.5rem;
+        }
+
+        &__secondary {
+            font-size: $font-size-normal;
+        }
+    }
+
+}
+
+
+.para {
+    &__primary {
+        font-size: 0.9rem;
+        color: $color-grey-dark;
+        font-family: $font-paragraph;
+
+    }
+
+    &__secondary {
+        color: $color-grey-light;
+        font-size: 0.8rem;
+    }
+}
